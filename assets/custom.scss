@@ -76,3 +76,18 @@
   font-weight: normal;
   src: url('../fonts/InterDisplay-Light.woff2') format('woff2');
 }
+
+
+@font-face {
+  font-family: 'Inter Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Inter Bold'), url('../fonts/InterDisplay-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter Semi-Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Inter Semi-Bold'), url('../fonts/InterDisplay-SemiBold.woff2') format('woff2');
+}

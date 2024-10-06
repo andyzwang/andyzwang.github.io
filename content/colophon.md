@@ -6,24 +6,25 @@ show_title_as_headline: true
 title: Colophon
 ---
 
-Thank you to all the folks who have contributed both technical and creative skills to this project:
+### colophon (noun): "an inscription at the end of a book or manuscript usually with facts about its production”
 
-+ [Desirée De Leon :giraffe:](http://desiree.rbind.io/) (designed 5 of the custom color themes, made illustrations for the workshop, and provided general aesthetic feedback along the way)
+*— [Merriam-Webster Dictionary](https://www.merriam-webster.com/dictionary/colophon)*
 
-+ [Garrick Aden-Buie :mage:](https://www.garrickadenbuie.com/) (debugged headroom.js and lent his panelset.js code to the theme)
+---
 
-+ [Allison Horst :dog2:](https://www.allisonhorst.com/) (awesome illustrations of campfires, seedlings, and evergreens, as well as my R Markdown hedgehog mascot :hedgehog:)
+Two design decisions guide how I develop my website: 
+1. File over app.
+2. Open source rocks.
 
-+ [Maëlle Salmon :fishing_pole_and_fish:](https://masalmon.eu/) (help with features, and naming the theme [Hugo Apéro](https://hugo-apero.netlify.app/)!)
+As a result, this site was written and edited in [RStudio](https://posit.co/download/rstudio-desktop/) and [Obsidian](https://obsidian.md/) using (R)Markdown files. My text files are compiled into web pages using [Hugo](https://gohugo.io/) and hosted on [GitHub Pages](https://pages.github.com/). 
 
-+ [Christophe Dervieux :crayon:](http://cderv.rbind.io/) (thinking through blogdown/Hugo intricacies and syntax highlighting)
+I wanted my website to emulate a comfortable analog reading experience: I made use of the wonderful [Hugo Apero](https://github.com/hugo-apero/) template, customized it with Steph Ango's [Flexoki](https://stephango.com/flexoki) color palate, and edited with some TLC by me. My header font is [Inter Display Bold](https://rsms.me/inter/), and my body text is [Cardo](https://fonts.google.com/specimen/Cardo).
 
-+ [Yihui Xie :martial_arts_uniform:](https://yihui.org/) (for the blogdown package, getting me hooked on Hugo, and helping me with layout code inspired by his many Hugo themes)
+Thank you to [Daiki Yoshioka](https://www.linkedin.com/in/daiki-yoshioka/) for the wonderful headshot.
 
-+ [Athanasia Monika Mowinckel :purple_heart:](https://drmowinckels.io/) (for help finding :bug: and SASS support for making color themes work so much better :art:)
+All [posts](/post/) on this website are released under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-+ [Jannik Buhr :otter:](https://jmbuhr.de) (enabling math rendering with mathjax and katex)
+<center>
+<i class="fab fa-creative-commons fa-2x"></i><i class="fab fa-creative-commons-by fa-2x"></i><i class="fab fa-creative-commons-nc fa-2x"></i><i class="fab fa-creative-commons-sa fa-2x"></i>
+</center>
 
-And last but not least, Eric Anderson and the team at [Formspree](https://formspree.io/) for developing a Hugo theme with such great bones: <https://github.com/formspree/blogophonic-hugo>
-
-My [blog posts](/post/) are released under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
