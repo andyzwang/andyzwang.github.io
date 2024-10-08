@@ -12,7 +12,7 @@ title: Colophon
 
 ---
 
-Two design decisions guide how I develop my website: 
+Two design decisions guided this website's design: 
 1. File over app.
 2. Open source rocks.
 

@@ -1,6 +1,6 @@
 ---
 date: "2019-02-25T13:38:41-06:00"
-description: 
+description: Free free to send me a message at [hi@andyzwang.com](mailto:hi@andyzwang.com), or fill out the form on this page!
 draft: false
 formspree_form_id: xrbgzllo
 layout: split-right
