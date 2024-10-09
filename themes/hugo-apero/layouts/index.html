@@ -1,10 +1,10 @@
 {{ define "main" }}
 {{ $page := . }}
-<main class="page-main pa4" role="main">
+<main class="page-main pa4-ns" role="main">
   <section class="page-content mw9 center">
     <div class="flex-l items-center flex-column flex-row-l" style="{{ if .Params.image_left }}flex-direction: row-reverse;{{ end }}">
       <!-- Image div first on mobile, second on desktop -->
-      <div class="order-0 order-1-l tl-m tr-l w-100 w-50-l {{ if .Params.image_left }}ml0 ml4-l ml4-m{{ else }}mr4{{ end }}">
+      <div class="order-0 order-1-l tl-m tr-l w-100 w-50-l {{ if .Params.image_left }}ml0 ml4-ns{{ else }}mr4{{ end }}">
         {{ with .Params.images }}
         {{ range first 1 . }}<img class="mv0 w-70-m" src="{{ . }}"/>{{ end }}
         {{ end }}
