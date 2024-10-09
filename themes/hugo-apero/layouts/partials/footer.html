@@ -13,6 +13,10 @@
       {{ range site.Menus.footer }}
       <a class="dib pv1 ph2 link" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
       {{ end }}
+      <span id="theme-toggle" class="dib" title="Toggle dark mode" aria-label="Toggle dark mode" type="button" role="switch" aria-checked="true">
+        <div class="theme-toggle-slide"></div>
+        <div class="theme-toggle-switch"></div>
+      </span>
     </div>
   </nav>
   {{ with site.Params.math }}
