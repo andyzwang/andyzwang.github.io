@@ -167,7 +167,8 @@ h1, h2, h3, h4, h5, h6 {
 
 // SHORTCODES
 // apply tachyons classes to highlight shortcode (and markdown codefence)
-.highlight { @extend .f6, .lh-copy ; }
+.highlight { @extend .f6, .lh-copy ; 
+}
 
 // apply tachyons classes to figure shortcode
 figure {
@@ -513,8 +514,8 @@ nav#SectionTableOfContents ul details {
 
 // Style code
 pre {
-  @extend .pre, .br1, .pa3, .bg-transparent, .overflow-x-auto, .overflow-y-hidden;
-  border: 1px solid #ebebeb;
+  @extend .pre, .br4, .pa3, .overflow-x-auto, .overflow-y-hidden;
+  border: 1px solid $borderColorCustom;
 }
 
 pre code span {

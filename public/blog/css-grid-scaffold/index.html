@@ -58,13 +58,35 @@ Overview Since I began building websites in Y2K, I’ve lost count how many time
   <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
   
   
-  <link rel="stylesheet" href="/style.main.min.2d85fd52f5b6d79ac6902b7e6f416af9d8bebd96af051493b860e39498798f7a.css" integrity="sha256-LYX9UvW215rGkCt&#43;b0Fq&#43;di&#43;vZavBRSTuGDjlJh5j3o=" media="screen">
+  <link rel="stylesheet" href="/style.main.min.a9b1ccfababd2a03a7014a64f5f9471ee2f060c19bf2a4f3c585b61adbdf774a.css" integrity="sha256-qbHM&#43;rq9KgOnAUpk9flHHuLwYMGb8qTzxYW2Gtvfd0o=" media="screen">
   
   
   <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
   
   
   <script src="/main.min.110f85661c27e535f6c6b5dc475feabac6acc895516702b9a98f7c06a7a28e89.js" type="text/javascript"></script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
       <div class="grid-container single-sidebar">
@@ -156,10 +178,10 @@ Overview Since I began building websites in Y2K, I’ve lost count how many time
     </svg></a>
 </h2>
 <p>CSS Grid is a total game changer, IMHO. Compared to the bottomless pit of despair that is the old way, the new way of building a site structure can be done in as little as 5 lines of CSS. Of course, it always takes more than that, but not much. I mean this is really the meat of the deal:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#458;font-weight:bold">grid-container</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">display</span>: <span style="color:#000;font-weight:bold">grid</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">grid-template-columns</span>: <span style="color:#900;font-weight:bold">repeat</span>(<span style="color:#099">6</span>, <span style="color:#099">1</span>fr);
-</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">grid-template-rows</span>: <span style="color:#900;font-weight:bold">repeat</span>(<span style="color:#099">3</span>, <span style="color:#000;font-weight:bold">auto</span>);
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#1f1f24;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#5dd8ff">grid-container</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#fc5fa3">display</span>: <span style="color:#fc5fa3">grid</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#fc5fa3">grid-template-columns</span>: <span style="color:#41a1c0">repeat</span>(<span style="color:#d0bf69">6</span>, <span style="color:#d0bf69">1</span>fr);
+</span></span><span style="display:flex;"><span>  <span style="color:#fc5fa3">grid-template-rows</span>: <span style="color:#41a1c0">repeat</span>(<span style="color:#d0bf69">3</span>, <span style="color:#fc5fa3">auto</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>
 

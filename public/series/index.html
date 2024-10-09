@@ -55,13 +55,35 @@
     <link rel="alternate" type="application/rss+xml" href="https://andyzwang.com/series/index.xml" title="Andy Z. Wang" />
   
   
-  <link rel="stylesheet" href="/style.main.min.2d85fd52f5b6d79ac6902b7e6f416af9d8bebd96af051493b860e39498798f7a.css" integrity="sha256-LYX9UvW215rGkCt&#43;b0Fq&#43;di&#43;vZavBRSTuGDjlJh5j3o=" media="screen">
+  <link rel="stylesheet" href="/style.main.min.a9b1ccfababd2a03a7014a64f5f9471ee2f060c19bf2a4f3c585b61adbdf774a.css" integrity="sha256-qbHM&#43;rq9KgOnAUpk9flHHuLwYMGb8qTzxYW2Gtvfd0o=" media="screen">
   
   
   <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
   
   
   <script src="/main.min.110f85661c27e535f6c6b5dc475feabac6acc895516702b9a98f7c06a7a28e89.js" type="text/javascript"></script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
       <div class="grid-container">
