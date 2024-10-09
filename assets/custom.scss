@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: normal;
+  src: local('IBM Plex Mono'), url('../fonts/IBMPlexMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Cardo';
   font-style: normal;
   font-weight: normal;
@@ -175,7 +182,8 @@ theme-dark main * {
     > p { @extend .lh-copy ; }
 
     > p > code {
-      @extend .f6, .ph1, .bg-white-50 ;
+      @extend .f6, .ph1, .br3;
+      background-color: $sidebarBgColorDark;
     }
 
     blockquote {
@@ -241,17 +249,6 @@ theme-dark main * {
   .highlight { @extend .f6, .lh-copy ; }
 
   // apply tachyons classes to figure shortcode
-  figure {
-    @extend .mr0, .ml0 ;
-
-    figcaption p,
-    figcaption h4 {
-      @extend .f7 ;
-    }
-    figcaption p {
-      @extend .fw4, .mv1 ;
-    }
-  }
 
 
   // FORMS
@@ -638,4 +635,7 @@ theme-dark main * {
 
 html{
   scroll-behavior: smooth;
+}
+code{
+  font-family: "IBM Plex Mono", Consolas, monaco, monospace;
 }

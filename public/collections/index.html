@@ -65,7 +65,7 @@ minus the blog.">
     <link rel="alternate" type="application/rss+xml" href="https://andyzwang.com/collections/index.xml" title="Andy Z. Wang" />
   
   
-  <link rel="stylesheet" href="/style.main.min.a9b1ccfababd2a03a7014a64f5f9471ee2f060c19bf2a4f3c585b61adbdf774a.css" integrity="sha256-qbHM&#43;rq9KgOnAUpk9flHHuLwYMGb8qTzxYW2Gtvfd0o=" media="screen">
+  <link rel="stylesheet" href="/style.main.min.c8cb49e82480ebbf30de33c795582a8be64c3c9333ee0bf33d8c2dd0ea6b3e3a.css" integrity="sha256-yMtJ6CSA678w3jPHlVgqi&#43;ZMPJMz7gvzPYwt0OprPjo=" media="screen">
   
   
   <script src="/panelset.min.ed1ac24b6e16f4e2481e3d1d098ae66f5bc77438aef619e6e266d8ac5b00dc72.js" type="text/javascript"></script>
@@ -479,41 +479,42 @@ minus the blog.</p>
 
       </div>
     </body><script>
-  if (localStorage.theme === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.querySelector('body').classList.add('theme-dark')
+  
+  const bodyClassList = document.querySelector('body').classList;
+  const theme = localStorage.theme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  bodyClassList.toggle('theme-dark', theme === 'dark');
+
+  const darkModeToggle = document.querySelector("#theme-toggle");
+
+  
+  function toggleTheme() {
+    bodyClassList.toggle("theme-dark");
+    updateThemeState();
   }
+
+  
+  function updateThemeState() {
+    const isDarkMode = bodyClassList.contains("theme-dark");
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    darkModeToggle.setAttribute("aria-checked", isDarkMode.toString());
+  }
+
+  
+  function initializeTheme() {
+    darkModeToggle.setAttribute("aria-checked", bodyClassList.contains("theme-dark").toString());
+  }
+
+  
+  darkModeToggle.addEventListener("click", toggleTheme);
+
+  
+  window.addEventListener('keydown', (e) => {
+    if (!['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName) && (e.key.toLowerCase() === 'd') && !e.ctrlKey && !e.metaKey) {
+      toggleTheme();
+    }
+  });
+
+  
+  initializeTheme();
 </script>
-
-<script>
-      var darkModeToggle = document.querySelector("#theme-toggle");
-
-      function toggleTheme() {
-        document.body.classList.toggle("theme-dark");
-        updateThemeState();
-      }
-
-      function updateThemeState() {
-        let isDarkMode = document.body.classList.contains("theme-dark");
-        let theme = isDarkMode ? "dark" : "light";
-        localStorage.setItem("theme", theme);
-        darkModeToggle.setAttribute("aria-checked", isDarkMode.toString());
-      }
-
-      function initializeTheme() {
-        let isDarkMode = document.body.classList.contains("theme-dark");
-        darkModeToggle.setAttribute("aria-checked", isDarkMode.toString());
-      }
-
-      darkModeToggle.addEventListener("click", toggleTheme);
-
-      window.addEventListener('keydown', function(e) {
-          if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
-            return;
-          }
-          if ((e.key === 'd' || e.key === 'D') && !e.ctrlKey && !e.metaKey) {
-            toggleTheme();
-          }
-      });
-
-      initializeTheme();
-    </script></html>
+</html>

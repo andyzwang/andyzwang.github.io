@@ -1,39 +1,39 @@
 <script>
-  if (localStorage.theme === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.querySelector('body').classList.add('theme-dark')
+  // Set theme based on localStorage or system preference
+  const bodyClassList = document.querySelector('body').classList;
+  const theme = localStorage.theme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  bodyClassList.toggle('theme-dark', theme === 'dark');
+
+  const darkModeToggle = document.querySelector("#theme-toggle");
+
+  // Toggle theme between light and dark
+  function toggleTheme() {
+    bodyClassList.toggle("theme-dark");
+    updateThemeState();
   }
+
+  // Update theme state in localStorage and toggle button aria-checked attribute
+  function updateThemeState() {
+    const isDarkMode = bodyClassList.contains("theme-dark");
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    darkModeToggle.setAttribute("aria-checked", isDarkMode.toString());
+  }
+
+  // Initialize the theme toggle button's aria-checked attribute
+  function initializeTheme() {
+    darkModeToggle.setAttribute("aria-checked", bodyClassList.contains("theme-dark").toString());
+  }
+
+  // Toggle theme on click of toggle button
+  darkModeToggle.addEventListener("click", toggleTheme);
+
+  // Toggle theme on 'd' or 'D' key press unless typing in input/textarea
+  window.addEventListener('keydown', (e) => {
+    if (!['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName) && (e.key.toLowerCase() === 'd') && !e.ctrlKey && !e.metaKey) {
+      toggleTheme();
+    }
+  });
+
+  // Initialize the theme on page load
+  initializeTheme();
 </script>
-
-<script>
-      var darkModeToggle = document.querySelector("#theme-toggle");
-
-      function toggleTheme() {
-        document.body.classList.toggle("theme-dark");
-        updateThemeState();
-      }
-
-      function updateThemeState() {
-        let isDarkMode = document.body.classList.contains("theme-dark");
-        let theme = isDarkMode ? "dark" : "light";
-        localStorage.setItem("theme", theme);
-        darkModeToggle.setAttribute("aria-checked", isDarkMode.toString());
-      }
-
-      function initializeTheme() {
-        let isDarkMode = document.body.classList.contains("theme-dark");
-        darkModeToggle.setAttribute("aria-checked", isDarkMode.toString());
-      }
-
-      darkModeToggle.addEventListener("click", toggleTheme);
-
-      window.addEventListener('keydown', function(e) {
-          if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
-            return;
-          }
-          if ((e.key === 'd' || e.key === 'D') && !e.ctrlKey && !e.metaKey) {
-            toggleTheme();
-          }
-      });
-
-      initializeTheme();
-    </script>
