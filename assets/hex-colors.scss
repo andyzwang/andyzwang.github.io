@@ -1,5 +1,4 @@
 // set custom hex colors 
-
 // backgrounds -> paper & bg from flexoki
 $siteBgColorCustom: #FFFCF0;
 $buttonHoverTextColorCustom: #FFFCF0;
@@ -8,6 +7,7 @@ $sidebarBgColorCustom: #F2F0E5;
 // primary
 $textColorCustom: #100F0F;
 $headingColorCustom: #100F0F;
+$buttonTextColorCustom: #100F0F;
 
 // secondary text color
 $sidebarTextColorCustom: #6F6E69;
@@ -25,11 +25,33 @@ $buttonHoverBgColorCustom: #AD8301;
 // ui color
 $borderColorCustom: #E6E4D9;
 $buttonBgColorCustom: #E6E4D9;
-$buttonTextColorCustom: #100F0F;
 
+// dark mode!
+$siteBgColorDark: #100F0F;
+$buttonHoverTextColorDark: #100F0F;
+$sidebarBgColorDark: #1C1B1A;
 
+// primary
+$textColorDark: #CECDC3;
+$headingColorDark: #CECDC3;
+$buttonTextColorDark: #CECDC3;
 
+// secondary text color
+$sidebarTextColorDark: #878580;
+$sidebarLinkColorDark: #878580;
+$navLinkColorDark: #878580;
 
+// tertiary text color
+$footerTextColorDark: #575653;
+
+// emphasis text color
+$headlineColorDark: #D0A215;
+$bodyLinkColorDark: #D0A215;
+$buttonHoverBgColorDark: #D0A215;
+
+// ui color
+$borderColorDark: #282726;
+$buttonBgColorDark: #282726;
 
 
 

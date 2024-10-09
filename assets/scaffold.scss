@@ -331,12 +331,12 @@ form {
 a > svg.anchor-symbol {
   color: transparent;
   margin-left: .5rem;
-  fill: $black-40;
+  fill: $footerTextColorCustom;
   height: 22px;
 }
 
 a > svg.anchor-symbol:hover {
-  fill: $black-60;
+  fill: $sidebarTextColorCustom;
   transition: fill 0.3s ease;
 }
 
