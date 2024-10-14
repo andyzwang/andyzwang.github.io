@@ -88,7 +88,7 @@ enableEmoji = true
   [[params.social]]
       icon      = "newspaper" # icon name without the 'fa-'
       icon_pack = "far"
-      url       = "https://muckrack.com/andy-wang-3"
+      url       = "https://muckrack.com/andyzwang"
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
