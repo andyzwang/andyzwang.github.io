@@ -8,7 +8,7 @@ images:
 - img/andy_headshot.jpg
 show_action_link: false
 show_social_links: true
-subtitle: Schwarzman Scholar @ Tsinghua University
+subtitle: PhD Student @ Stanford University
 text_align_left: true
 title: Hi, I'm Andy.
 type: home
